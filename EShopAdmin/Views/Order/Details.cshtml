@@ -1,0 +1,55 @@
+@model EShop.Domain.DTO.OrderDTO
+
+@{
+    ViewData["Title"] = "Order details";
+}
+
+<h1>Order details</h1>
+
+<p>
+    <a asp-action="GenerateInvoice"
+       asp-route-id="@Model.Id"
+       class="btn btn-secondary">
+        Download Invoice (PDF)
+    </a>
+</p>
+
+<div>
+    <p><strong>Order Id:</strong> @Model.Id</p>
+    <p><strong>User:</strong> @Model.UserEmail (@Model.OwnerId)</p>
+    <p><strong>Total price:</strong> @Model.TotalPrice</p>
+</div>
+
+<h3>Products</h3>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Line total</th>
+    </tr>
+    </thead>
+    <tbody>
+    @{
+        var i = 1;
+    }
+    @foreach (var p in Model.Products)
+    {
+        <tr>
+            <td>@i</td>
+            <td>@p.ProductName</td>
+            <td>@p.Price</td>
+            <td>@p.Quantity</td>
+            <td>@p.LineTotal</td>
+        </tr>
+        i++;
+    }
+    </tbody>
+</table>
+
+<p>
+    <a asp-action="Index">Back to list</a>
+</p>

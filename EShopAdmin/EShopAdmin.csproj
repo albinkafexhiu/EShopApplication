@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>aspnet-EShopAdmin-84b12a5b-26f6-4af2-b6f5-3aec1ad11478</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="ClosedXML" Version="0.105.0" />
+        <PackageReference Include="ExcelDataReader" Version="3.8.0" />
+        <PackageReference Include="ExcelDataReader.DataSet" Version="3.8.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="10.0.2" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="10.0.2" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="10.0.2" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.2" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.2" />
+        <PackageReference Include="QuestPDF" Version="2025.12.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\EShop.Domain\EShop.Domain.csproj" />
+    </ItemGroup>
+
+</Project>

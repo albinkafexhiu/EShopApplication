@@ -1,0 +1,45 @@
+@model IEnumerable<EShop.Domain.DTO.OrderDTO>
+
+@{
+    ViewData["Title"] = "Orders";
+}
+
+<h1>Orders</h1>
+<p>
+    <a asp-controller="Home" asp-action="ExportOrders" class="btn btn-success">
+        Export Orders to Excel
+    </a>
+</p>
+<table class="table">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Order Id</th>
+        <th>User Email</th>
+        <th>Total Price</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @{
+        var i = 1;
+    }
+    @foreach (var order in Model)
+    {
+        <tr>
+            <td>@i</td>
+            <td>@order.Id</td>
+            <td>@order.UserEmail</td>
+            <td>@order.TotalPrice</td>
+            <td>
+                <a asp-controller="Order"
+                   asp-action="Details"
+                   asp-route-id="@order.Id">
+                    Details
+                </a>
+            </td>
+        </tr>
+        i++;
+    }
+    </tbody>
+</table>

@@ -30,9 +30,10 @@ builder.Services.AddDefaultIdentity<EShopApplicationUser>(options =>
 // 🔹 Repository & Service registrations
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<IProductService, ProductService>();
-builder.Services.AddScoped<IShoppingCartService, ShoppingCartService>(); // <— add this
-
+builder.Services.AddScoped<IShoppingCartService, ShoppingCartService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<IOrderService, OrderService>();
+
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();

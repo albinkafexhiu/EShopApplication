@@ -1,0 +1,30 @@
+@{
+    ViewData["Title"] = "Import Users";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Import Users</h1>
+
+<form asp-action="ImportUsers" asp-controller="Home"
+      method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label>Select Excel file</label>
+        <input type="file" name="file" class="form-control" />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Import</button>
+</form>
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-success" style="margin-top:15px;">
+        @ViewBag.Message
+    </div>
+}
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger" style="margin-top:15px;">
+        @ViewBag.Error
+    </div>
+}

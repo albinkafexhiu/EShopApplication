@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShop.Repository", "EShop.R
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShop.Service", "EShop.Service\EShop.Service.csproj", "{F1E443F2-DCFD-487D-9FD7-E95218654B47}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShopAdmin", "EShopAdmin\EShopAdmin.csproj", "{48165A86-951F-47DD-B239-96F651C890EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{F1E443F2-DCFD-487D-9FD7-E95218654B47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1E443F2-DCFD-487D-9FD7-E95218654B47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1E443F2-DCFD-487D-9FD7-E95218654B47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48165A86-951F-47DD-B239-96F651C890EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48165A86-951F-47DD-B239-96F651C890EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48165A86-951F-47DD-B239-96F651C890EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48165A86-951F-47DD-B239-96F651C890EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
